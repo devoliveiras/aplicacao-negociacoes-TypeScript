@@ -5,7 +5,7 @@ export abstract class View<T>{ //Definido o parametro como Generic Type <T> para
         this.elemento = document.querySelector(seletor);
     }
 
-    abstract template(model: T): string;
+    protected abstract template(model: T): string;
 
     update(model: T): void {
         const template = this.template(model);
