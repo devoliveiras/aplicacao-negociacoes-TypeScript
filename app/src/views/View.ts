@@ -1,3 +1,5 @@
+import { logarTempoDeExecucao } from "../decorators/logarTempoDeExecucao.js";
+
 export abstract class View<T>{ //Definido o parametro como Generic Type <T> para ser declarado o tipo usado nas filhas
     protected elemento: HTMLElement;
     private escapar = false;
@@ -18,6 +20,7 @@ export abstract class View<T>{ //Definido o parametro como Generic Type <T> para
 
     protected abstract template(model: T): string;
 
+    @logarTempoDeExecucao(true)
     public update(model: T): void {
         let template = this.template(model);
         if(this.escapar){
