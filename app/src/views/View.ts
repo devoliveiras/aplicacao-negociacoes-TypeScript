@@ -1,3 +1,4 @@
+import { inspecionar } from "../decorators/inspecionar.js";
 import { logarTempoDeExecucao } from "../decorators/logarTempoDeExecucao.js";
 
 export abstract class View<T>{ //Definido o parametro como Generic Type <T> para ser declarado o tipo usado nas filhas
