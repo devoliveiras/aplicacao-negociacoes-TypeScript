@@ -8,4 +8,7 @@ export class Negociacoes {
     lista() {
         return this.negociacoes;
     }
+    Duplicata(objeto) {
+        return JSON.stringify(this.negociacoes) === JSON.stringify(objeto);
+    }
 }
